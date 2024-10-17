@@ -1,6 +1,15 @@
-# Task Management System API
+# Dokumentasi API Task Management
 
-### Instalasi
+## Deskripsi
+API ini digunakan untuk mengelola tugas dalam aplikasi Task Management. Anda dapat membuat, membaca, memperbarui, dan menghapus tugas melalui endpoint yang disediakan.
+
+## Prerequisites
+Sebelum memulai, pastikan Anda telah menginstal:
+- PHP >= 8.0
+- Composer
+- Laravel >= 10
+
+## Instalasi
 
 git clone https://github.com/username/repo.git
 cd repo
@@ -29,7 +38,7 @@ php artisan serve
 Catatan
 Autentikasi: Jika Anda menggunakan JWT untuk autentikasi, Anda perlu menambahkan header Authorization dengan format Bearer <token_jwt> pada permintaan yang memerlukan autentikasi.
 Status Kode: Pastikan untuk memeriksa status kode HTTP pada respons:
-200 OK untuk sukses
-201 Created untuk berhasil membuat
-404 Not Found jika tugas tidak ditemukan
-401 Unauthorized jika autentikasi gagal
+- 200 OK untuk sukses
+- 201 Created untuk berhasil membuat
+- 404 Not Found jika tugas tidak ditemukan
+- 401 Unauthorized jika autentikasi gagal
