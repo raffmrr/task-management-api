@@ -11,12 +11,15 @@ Sebelum memulai, pastikan Anda telah menginstal:
 
 ## Instalasi
 
-git clone https://github.com/username/repo.git
-cd repo
+git clone https://github.com/raffmrr/task-management-api.git
+
+cd task-management-api
 
 composer install
 
-rename file env.example
+rename file ".env.example" menjadi .env
+
+php artisan key:generate
 
 php artisan jwt:secret
 
