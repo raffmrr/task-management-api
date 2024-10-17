@@ -1,7 +1,5 @@
 # Task Management System API
 
-## Dokumentasi API Task Management System
-
 ### Instalasi
 
 git clone https://github.com/username/repo.git
@@ -17,17 +15,16 @@ php artisan migrate
 
 php artisan serve
 
-Daftar Endpoint API
-Endpoint	Metode HTTP	Deskripsi	Contoh Input/Output
-/api/tasks	POST	Membuat tugas baru.	Input:
-{ "title": "Contoh Tugas", "description": "Deskripsi", "status": "pending" }
-Output: { "id": 1, "title": "Contoh Tugas", ... }
-/api/tasks	GET	Mengambil daftar semua tugas.	Output: [ { "id": 1, "title": "Contoh Tugas", ... }, ... ]
-/api/tasks/{id}	GET	Mengambil detail tugas berdasarkan ID.	Output: { "id": 1, "title": "Contoh Tugas", ... }
-/api/tasks/{id}	PUT/PATCH	Memperbarui tugas berdasarkan ID.	Input:
-{ "title": "Tugas Diperbarui", "description": "Deskripsi yang diperbarui", "status": "completed" }
-Output: { "id": 1, "title": "Tugas Diperbarui", ... }
-/api/tasks/{id}	DELETE	Menghapus tugas berdasarkan ID.	Output: { "message": "Tugas berhasil dihapus." }
+### Daftar Endpoint API
+
+| Endpoint             | Metode HTTP | Deskripsi                                  | Contoh Input/Output                                                                                                                                          |
+|----------------------|-------------|--------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `/api/tasks`        | POST        | Membuat tugas baru.                       | **Input:**<br> `{ "title": "Contoh Tugas", "description": "Deskripsi", "status": "pending" }`<br> **Output:** `{ "id": 1, "title": "Contoh Tugas", ... }`   |
+| `/api/tasks`        | GET         | Mengambil daftar semua tugas.             | **Output:** `[ { "id": 1, "title": "Contoh Tugas", ... }, ... ]`                                                                                         |
+| `/api/tasks/{id}`   | GET         | Mengambil detail tugas berdasarkan ID.     | **Output:** `{ "id": 1, "title": "Contoh Tugas", ... }`                                                                                                     |
+| `/api/tasks/{id}`   | PUT/PATCH   | Memperbarui tugas berdasarkan ID.          | **Input:**<br> `{ "title": "Tugas Diperbarui", "description": "Deskripsi yang diperbarui", "status": "completed" }`<br> **Output:** `{ "id": 1, "title": "Tugas Diperbarui", ... }` |
+| `/api/tasks/{id}`   | DELETE      | Menghapus tugas berdasarkan ID.            | **Output:** `{ "message": "Tugas berhasil dihapus." }`                                                                                                      |
+
 
 Catatan
 Autentikasi: Jika Anda menggunakan JWT untuk autentikasi, Anda perlu menambahkan header Authorization dengan format Bearer <token_jwt> pada permintaan yang memerlukan autentikasi.
